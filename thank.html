@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع التبرعات</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            direction: rtl;
+            font-family: 'Cairo', sans-serif;
+            text-align: right; /* تأكيد المحاذاة لليمين */
+            background: #f4f4f9;
+            color: #333;
+        }
+
+        .navbar {
+            background: #343a40;
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            font-size: 1.5rem;
+        }
+
+        .navbar-brand:hover {
+            color: #ddd !important;
+        }
+
+        .jumbotron {
+            background: linear-gradient(to right, #007bff, #00c6ff);
+            color: #fff;
+            padding: 2rem 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .jumbotron:hover {
+            transform: scale(1.02);
+        }
+
+        .btn-primary {
+            background-color: #0069d9;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-success {
+            transition: background-color 0.3s;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+        #donate {
+            margin-top: 2rem;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group i {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        footer {
+            background: #343a40;
+            color: #fff;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer:hover {
+            background-color: #2d3237;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">موقع التبرعات</a>
+    </nav>
+    <header class="jumbotron text-center">
+        <h1 class="display-4">مرحبًا بكم في موقع التبرعات</h1>
+        <p class="lead">ساعدنا في تغيير العالم، تبرع الآن!</p>
+        <a href="#donate" class="btn btn-primary btn-lg">تبرع الآن</a>
+    </header>
+    <div class="container" id="donate">
+        <h2>وسائل التبرع المختلفة</h2>
+        <form id="donationForm" action="confirmation.html" method="GET">
+            <div class="form-group">
+                <label for="donationAmount">مبلغ التبرع</label>
+                <input type="number" class="form-control" id="donationAmount" name="amount" placeholder="التبرع ب 10 جنيه كحد أدنى" min="10">
+            </div>
+            <div class="form-group">
+                <label for="paymentMethod">طريقة الدفع</label>
+                <select class="form-control" id="paymentMethod" name="method">
+                    
+                    <option value="telda"><i class="fas fa-mobile-alt"></i> Telda</option>
+                    <option value="vodafone-cash"><i class="fas fa-mobile-alt"></i> Vodafone Cash</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">تبرع</button>
+        </form>
+    </div>
+    <footer class="text-center">
+        <p>© 2024 موقع التبرعات. جميع الحقوق محفوظة.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
